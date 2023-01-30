@@ -119,7 +119,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=khatauli', o
 
     
 const get_temp = (city)=>{
-    result_place.innerText = city.value;
+    // result_place.innerText = city.value;
     fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city='+city, options)
 	.then(response => response.json())
 	.then(response => {
