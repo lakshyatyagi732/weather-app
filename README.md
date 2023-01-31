@@ -1,5 +1,5 @@
 
-# Project Title
+# Weather App
 
 This weather app allows users to check current weather conditions and forecasts using data from RapidAPI's weather API. The app is built using JavaScript, making it fast and dynamic. Users can easily search for the weather by city or zip code, and the app will display real-time information on temperature, humidity, wind speed, and more. The app is designed to provide users with accurate and up-to-date weather information, making it a convenient tool for planning outdoor activities or staying informed during inclement weather.
 
