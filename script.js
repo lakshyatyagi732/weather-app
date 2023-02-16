@@ -143,4 +143,5 @@ button.addEventListener('click',(e)=>{
     e.preventDefault();
     get_temp(input_nav.value);
     console.log(input_nav.value);
+    input_nav.value = "";
 });
