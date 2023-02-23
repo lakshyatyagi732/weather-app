@@ -66,7 +66,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Delhi', opti
        Dmax_temp.innerText = response.max_temp;
        Dwind_speed.innerText = response.wind_speed;
        Dwind_degrees.innerText = response.wind_degrees;
-       Dtemp2.innerText = response.temp + '°F';
+       Dtemp2.innerText = response.temp + '°C';
 
     })
 	.catch(err => console.error(err));
@@ -87,7 +87,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=khatauli', o
    Kmax_temp.innerText = response.max_temp;
    Kwind_speed.innerText = response.wind_speed;
    Kwind_degrees.innerText = response.wind_degrees;
-   Ktemp2.innerText = response.temp + '°F';
+   Ktemp2.innerText = response.temp + '°C';
 
 })
 .catch(err => console.error(err));
@@ -108,7 +108,7 @@ fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=khatauli', o
        Nmax_temp.innerText = response.max_temp;
        Nwind_speed.innerText = response.wind_speed;
        Nwind_degrees.innerText = response.wind_degrees;
-       Ntemp2.innerText = response.temp + '°F';
+       Ntemp2.innerText = response.temp + '°C';
     
     })
     .catch(err => console.error(err));
