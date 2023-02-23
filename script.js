@@ -34,7 +34,7 @@ var Nmin_temp = document.getElementById("Nmin_temp");
 var Nmax_temp = document.getElementById("Nmax_temp");
 var Nwind_speed = document.getElementById("Nwind_speed");
 var Nwind_degrees = document.getElementById("Nwind_degrees");
-var Ntemp2 = document.getElementById("Ntemp2");
+// var Ntemp2 = document.getElementById("Ntemp2");
 // ------------------------------------------------------
 
 var result_place = document.getElementById("result_place");
