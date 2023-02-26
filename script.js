@@ -44,6 +44,20 @@ var button = document.getElementById("search");
 
 // ------------------------------------------------------------------
 
+// ---------------------loader function -------------------------------
+let loader = document.getElementById('preloader');
+let main = document.getElementById('main');
+
+
+
+window.addEventListener('load',()=>{
+    setTimeout(()=>{
+        loader.style.display = "none";
+    main.style.display = 'block';
+    },1500)
+})
+
+// -------------------------------------------------------------------
 const options = {
 	method: 'GET',
 	headers: {
@@ -141,7 +155,12 @@ console.log(response);
 
 button.addEventListener('click',(e)=>{
     e.preventDefault();
+    main.style.display="none";
+    loader.style.display="flex"
+    setTimeout(() => {
+        main.style.display="inline";
+        loader.style.display="none"
+    }, 1000);
     get_temp(input_nav.value);
-    console.log(input_nav.value);
     input_nav.value = "";
 });

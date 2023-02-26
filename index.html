@@ -10,173 +10,188 @@
     <title>Weather App</title>
 </head>
 <body>
-    <header class="text-gray-400 bg-gray-900 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-            <img src="logo.png" alt="logo" height="20px" width="20px">
-            <span class="ml-3 text-xl">Weather App</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
 
-          </nav>
-         <form action="">
+  <div id="preloader">
+    <div class="loader_contain">
+      <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+    
+    </div>
+  </div>
 
-            <input type="text" id="input_nav" class="mr-5" placeholder="Enter City Name">
-            <button class="nav_button" id="search" type="submit">Search</button>
+<div id="main">
+  <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <img src="logo.png" alt="logo" height="20px" width="20px">
+        <span class="ml-3 text-xl">Weather App</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
 
-         </form>
-         
-          </button>
-        </div>
-      </header>
+      </nav>
+     <form action="">
+
+        <input type="text" id="input_nav" class="mr-5" placeholder="Enter City Name">
+        <button class="nav_button" id="search" type="submit">Search</button>
+
+     </form>
+     
+      </button>
+    </div>
+  </header>
 
 
 
 <!-- -------------------------------------------------------------------------------- -->
 
-    <section class="text-gray-400 bg-gray-900 body-font pt-6 pl-10">
-        <div class="container px-5 items-center content-center justify-center flex flex-wrap">
-          <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-center sm:pr-10">
-            <div class="w-full sm:p-4 px-4 mb-6">
-              <h1 class="title-font font-medium text-xl mb-2 text-white">PLACE NAME  ➤ <span id="result_place"> ...search... </span></h1>
-                        </div>
-            <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 id="Rcloud_pct">---</h2>
-              <p class="leading-relaxed">CLOUD PCT</p>
-            </div>
-            <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 id="Rtemp">---</h2>
-              <p class="leading-relaxed">TEMPRATURE</p>
-            </div>
-            <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 id="Rfeels_like">---</h2>
-              <p class="leading-relaxed">FEELS_LIKE</p>
-            </div>
-            <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-              <h2 id="Rhumidity">---</h2>
-              <p class="leading-relaxed">HUMIDITY</p>
-            </div>
-            <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-                <h2 id="Rmin_temp">---</h2>
-                <p class="leading-relaxed">MIN_TEMP</p>
-              </div>
-              <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-                <h2 id="Rmax_temp">---</h2>
-                <p class="leading-relaxed">MAX_TEMP</p>
-              </div>
-              <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-                <h2 id="Rwind_speed">---</h2>
-                <p class="leading-relaxed">WIND_SPEED</p>
-              </div>
-              <div class="sm:w-1/2 lg:w-1/4 w-1/2">
-                <h2 id="Rwind_degrees">---</h2>
-                <p class="leading-relaxed">WIND_DEGREES</p>
-              </div>
-          </div>
+<section class="text-gray-400 bg-gray-900 body-font pt-6 pl-10">
+    <div class="container px-5 items-center content-center justify-center flex flex-wrap">
+      <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-center sm:pr-10">
+        <div class="w-full sm:p-4 px-4 mb-6">
+          <h1 class="title-font font-medium text-xl mb-2 text-white">PLACE NAME  ➤ <span id="result_place"> ...search... </span></h1>
+                    </div>
+        <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+          <h2 id="Rcloud_pct">---</h2>
+          <p class="leading-relaxed">CLOUD PCT</p>
         </div>
-      </section>
+        <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+          <h2 id="Rtemp">---</h2>
+          <p class="leading-relaxed">TEMPRATURE</p>
+        </div>
+        <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+          <h2 id="Rfeels_like">---</h2>
+          <p class="leading-relaxed">FEELS_LIKE</p>
+        </div>
+        <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+          <h2 id="Rhumidity">---</h2>
+          <p class="leading-relaxed">HUMIDITY</p>
+        </div>
+        <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 id="Rmin_temp">---</h2>
+            <p class="leading-relaxed">MIN_TEMP</p>
+          </div>
+          <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 id="Rmax_temp">---</h2>
+            <p class="leading-relaxed">MAX_TEMP</p>
+          </div>
+          <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 id="Rwind_speed">---</h2>
+            <p class="leading-relaxed">WIND_SPEED</p>
+          </div>
+          <div class="sm:w-1/2 lg:w-1/4 w-1/2">
+            <h2 id="Rwind_degrees">---</h2>
+            <p class="leading-relaxed">WIND_DEGREES</p>
+          </div>
+      </div>
+    </div>
+  </section>
 
 <!-- --------------------------------------------------------------------------------------- -->
-    <section class="text-gray-400 bg-gray-900 body-font pl-10">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4">
-            <div class="p-4 lg:w-1/3">
-              <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Place Name</h2>
-                <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">Delhi</h1>
-                <p class="leading-relaxed mb-3">
+<section class="text-gray-400 bg-gray-900 body-font pl-10">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/3">
+          <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Place Name</h2>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">Delhi</h1>
+            <p class="leading-relaxed mb-3">
 
-                    <ul>
-                        <li>cloud_pct <span id="Dcloud_pct"> --- </span></li>
-                        <li>temp <span id="Dtemp"> --- </span></li>
-                        <li>feels_like <span id="Dfeels_like"> --- </span></li>
-                        <li>humidity <span id="Dhumidity"> --- </span></li>
-                        <li>min_temp <span id="Dmin_temp"> --- </span></li>
-                        <li>max_temp <span id="Dmax_temp"> --- </span></li>
-                        <li>wind speed <span id="Dwind_speed"> --- </span></li>
-                        <li>wind_degrees <span id="Dwind_degrees"> --- </span></li>
-                       
-                    </ul>
+                <ul>
+                    <li>cloud_pct <span id="Dcloud_pct"> --- </span></li>
+                    <li>temp <span id="Dtemp"> --- </span></li>
+                    <li>feels_like <span id="Dfeels_like"> --- </span></li>
+                    <li>humidity <span id="Dhumidity"> --- </span></li>
+                    <li>min_temp <span id="Dmin_temp"> --- </span></li>
+                    <li>max_temp <span id="Dmax_temp"> --- </span></li>
+                    <li>wind speed <span id="Dwind_speed"> --- </span></li>
+                    <li>wind_degrees <span id="Dwind_degrees"> --- </span></li>
+                   
+                </ul>
 
-                </p>
+            </p>
 
-                 
-                </a>
-                <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                  <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+             
+            </a>
+            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+              <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg><span id="Dtemp2">---</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/3">
+          <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Place Name</h2>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">Khatauli</h1>
+            <p class="leading-relaxed mb-3">
+
+                <ul>
+                    <li>cloud_pct <span id="Kcloud_pct"> --- </span></li>
+                    <li>temp <span id="Ktemp"> --- </span></li>
+                    <li>feels_like <span id="Kfeels_like"> --- </span></li>
+                    <li>humidity <span id="Khumidity"> --- </span></li>
+                    <li>min_temp <span id="Kmin_temp"> --- </span></li>
+                    <li>max_temp <span id="Kmax_temp"> --- </span></li>
+                    <li>wind speed <span id="Kwind_speed"> N--- </span></li>
+                    <li>wind_degrees <span id="Kwind_degrees"> --- </span></li>
+                   
+                </ul>
+
+            </p>
+             
+            </a>
+            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
                     <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                       <circle cx="12" cy="12" r="3"></circle>
-                    </svg><span id="Dtemp2">---</span>
+                    </svg><span id="Ktemp2">---</span>
                   </span>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 lg:w-1/3">
-              <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Place Name</h2>
-                <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">Khatauli</h1>
-                <p class="leading-relaxed mb-3">
-
-                    <ul>
-                        <li>cloud_pct <span id="Kcloud_pct"> --- </span></li>
-                        <li>temp <span id="Ktemp"> --- </span></li>
-                        <li>feels_like <span id="Kfeels_like"> --- </span></li>
-                        <li>humidity <span id="Khumidity"> --- </span></li>
-                        <li>min_temp <span id="Kmin_temp"> --- </span></li>
-                        <li>max_temp <span id="Kmax_temp"> --- </span></li>
-                        <li>wind speed <span id="Kwind_speed"> N--- </span></li>
-                        <li>wind_degrees <span id="Kwind_degrees"> --- </span></li>
-                       
-                    </ul>
-
-                </p>
-                 
-                </a>
-                <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                    <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                          <circle cx="12" cy="12" r="3"></circle>
-                        </svg><span id="Ktemp2">---</span>
-                      </span>
-                </div>
-              </div>
-            </div>
-            <div class="p-4 lg:w-1/3">
-              <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Place Name</h2>
-                <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">London</h1>
-                <p class="leading-relaxed mb-3">
-
-                    <ul>
-                        <li>cloud_pct <span id="Ncloud_pct"> --- </span></li>
-                        <li>temp <span id="Ntemp"> --- </span></li>
-                        <li>feels_like <span id="Nfeels_like"> --- </span></li>
-                        <li>humidity <span id="Nhumidity"> --- </span></li>
-                        <li>min_temp <span id="Nmin_temp"> --- </span></li>
-                        <li>max_temp <span id="Nmax_temp"> --- </span></li>
-                        <li>wind speed <span id="Nwind_speed"> --- </span></li>
-                        <li>wind_degrees <span id="Nwind_degrees"> --- </span></li>
-                       
-                    </ul>
-
-                </p>
-                 
-                </a>
-                <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
-                    <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
-                        <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                          <circle cx="12" cy="12" r="3"></circle>
-                        </svg><span id="Ntemp2">---</span>
-                      </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </section>
+        <div class="p-4 lg:w-1/3">
+          <div class="h-full bg-gray-800 bg-opacity-40 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+            <h2 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Place Name</h2>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-white mb-3">London</h1>
+            <p class="leading-relaxed mb-3">
+
+                <ul>
+                    <li>cloud_pct <span id="Ncloud_pct"> --- </span></li>
+                    <li>temp <span id="Ntemp"> --- </span></li>
+                    <li>feels_like <span id="Nfeels_like"> --- </span></li>
+                    <li>humidity <span id="Nhumidity"> --- </span></li>
+                    <li>min_temp <span id="Nmin_temp"> --- </span></li>
+                    <li>max_temp <span id="Nmax_temp"> --- </span></li>
+                    <li>wind speed <span id="Nwind_speed"> --- </span></li>
+                    <li>wind_degrees <span id="Nwind_degrees"> --- </span></li>
+                   
+                </ul>
+
+            </p>
+             
+            </a>
+            <div class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                <span class="text-gray-500 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-700 border-opacity-50">
+                    <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg><span id="Ntemp2">---</span>
+                  </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 
 
 <script src="script.js"></script>

@@ -1,48 +1,125 @@
+#input_nav {
+        background-color: #212121;
+        max-width: 190px;
+        height: 30px;
+        padding: 10px;
+        /* text-align: center; */
+        border: 2px solid white;
+        border-radius: 5px;
+        /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+}
 
-            #input_nav{
-                background-color: #212121;
-                max-width: 190px;
-                height: 30px;
-                padding: 10px;
-                /* text-align: center; */
-                border: 2px solid white;
-                border-radius: 5px;
-                /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
-              }
-              #input_nav:focus{
-              
-                color: rgb(0, 255, 255);
-                background-color: #212121;
-                outline-color: rgb(0, 255, 255);
-                box-shadow: -3px -3px 15px rgb(0, 255, 255);
-                transition: .1s;
-                transition-property: box-shadow;
-              
-              }
-              
-              .nav_button{
-                  padding: 5px 10px;
-               border-radius: 50px;
-               border: 0;
-               background-color: white;
-               box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
-               letter-spacing: 1.5px;
-               text-transform: uppercase;
-               font-size: 15px;
-               transition: all .5s ease;
-              }
-              .nav_button:hover{
-                  letter-spacing: 3px;
-               background-color: hsl(261deg 80% 48%);
-               color: hsl(0, 0%, 100%);
-               box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
-              }
-              .nav_button:active{
-                  letter-spacing: 3px;
-               background-color: hsl(261deg 80% 48%);
-               color: hsl(0, 0%, 100%);
-               box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
-               transform: translateY(10px);
-               transition: 100ms;
-              }
-                 
+#input_nav:focus {
+
+        color: rgb(0, 255, 255);
+        background-color: #212121;
+        outline-color: rgb(0, 255, 255);
+        box-shadow: -3px -3px 15px rgb(0, 255, 255);
+        transition: .1s;
+        transition-property: box-shadow;
+
+}
+
+.nav_button {
+        padding: 5px 10px;
+        border-radius: 50px;
+        border: 0;
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 15px;
+        transition: all .5s ease;
+}
+
+.nav_button:hover {
+        letter-spacing: 3px;
+        background-color: hsl(261deg 80% 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.nav_button:active {
+        letter-spacing: 3px;
+        background-color: hsl(261deg 80% 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+}
+
+.loader {
+        --dim: 3rem;
+        width: var(--dim);
+        height: var(--dim);
+        position: relative;
+        animation: spin988 2s linear infinite;
+      }
+      
+      .loader .circle {
+        --color: white;
+        --dim: 1.2rem;
+        width: var(--dim);
+        height: var(--dim);
+        background-color: var(--color);
+        border-radius: 50%;
+        position: absolute;
+      }
+      
+      .loader .circle:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+      
+      .loader .circle:nth-child(2) {
+        top: 0;
+        right: 0;
+      }
+      
+      .loader .circle:nth-child(3) {
+        bottom: 0;
+        left: 0;
+      }
+      
+      .loader .circle:nth-child(4) {
+        bottom: 0;
+        right: 0;
+      }
+      
+      @keyframes spin988 {
+        0% {
+          transform: scale(1) rotate(0);
+        }
+      
+        20%, 25% {
+          transform: scale(1.3) rotate(90deg);
+        }
+      
+        45%, 50% {
+          transform: scale(1) rotate(180deg);
+        }
+      
+        70%, 75% {
+          transform: scale(1.3) rotate(270deg);
+        }
+      
+        95%, 100% {
+          transform: scale(1) rotate(360deg);
+        }
+      }
+
+#main {
+        display: none;
+}
+
+#preloader {
+        background-color: #212121;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+}
