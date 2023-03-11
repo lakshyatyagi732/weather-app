@@ -52,8 +52,8 @@ let main = document.getElementById('main');
 
 window.addEventListener('load',()=>{
     setTimeout(()=>{
-        loader.style.display = "none";
-    main.style.display = 'block';
+        loader.classList.add("none");
+         main.classList.remove("none");
     },1500)
 })
 
@@ -155,12 +155,12 @@ console.log(response);
 
 button.addEventListener('click',(e)=>{
     e.preventDefault();
-    main.style.display="none";
-    loader.style.display="flex"
+    loader.classList.remove("none");
+    main.classList.add("none");
     setTimeout(() => {
-        main.style.display="inline";
-        loader.style.display="none"
-    }, 1000);
+        loader.classList.add("none");
+         main.classList.remove("none");
+    }, 3000);
     get_temp(input_nav.value);
     input_nav.value = "";
 });

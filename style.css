@@ -48,7 +48,7 @@
         transition: 100ms;
 }
 
-.container {
+.container2 {
   width: 250px;
   height: 250px;
   margin: 100px auto;
@@ -157,13 +157,16 @@
     transform: translateX(15px);
   }
 }
-
+.none{
+  display: none !important;
+}
 
 #preloader {
         background-color: #212121;
         width: 100vw;
         height: 100vh;
         position: fixed;
+        z-index:2;
         display: flex;
         justify-content: center;
         align-items: center;
