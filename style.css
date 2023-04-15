@@ -48,113 +48,198 @@
         transition: 100ms;
 }
 
-.container2 {
-  width: 250px;
-  height: 250px;
-  margin: 100px auto;
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pl {
+  display: block;
+  width: 9.375em;
+  height: 9.375em;
 }
 
-.cloud {
-  width: 250px;
+.pl__arrows,
+.pl__ring-rotate,
+.pl__ring-stroke,
+.pl__tick {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-.front {
-  padding-top: 45px;
-  margin-left: 25px;
-  display: inline;
-  position: absolute;
-  z-index: 11;
-  animation: clouds 8s infinite;
-  animation-timing-function: ease-in-out;
+.pl__arrows {
+  -webkit-animation-name: arrows42;
+          animation-name: arrows42;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 16px 52px;
+      -ms-transform-origin: 16px 52px;
+          transform-origin: 16px 52px;
 }
 
-.back {
-  margin-top: -30px;
-  margin-left: 150px;
-  z-index: 12;
-  animation: clouds 12s infinite;
-  animation-timing-function: ease-in-out;
+.pl__ring-rotate,
+.pl__ring-stroke {
+  -webkit-transform-origin: 80px 80px;
+      -ms-transform-origin: 80px 80px;
+          transform-origin: 80px 80px;
 }
 
-.right-front {
-  width: 45px;
-  height: 45px;
-  border-radius: 50% 50% 50% 0%;
-  background-color: #4c9beb;
-  display: inline-block;
-  margin-left: -25px;
-  z-index: 5;
+.pl__ring-rotate {
+  -webkit-animation-name: ringRotate42;
+          animation-name: ringRotate42;
 }
 
-.left-front {
-  width: 65px;
-  height: 65px;
-  border-radius: 50% 50% 0% 50%;
-  background-color: #4c9beb;
-  display: inline-block;
-  z-index: 5;
+.pl__ring-stroke {
+  -webkit-animation-name: ringStroke42;
+          animation-name: ringStroke42;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
-.right-back {
-  width: 50px;
-  height: 50px;
-  border-radius: 50% 50% 50% 0%;
-  background-color: #4c9beb;
-  display: inline-block;
-  margin-left: -20px;
-  z-index: 5;
+.pl__tick {
+  -webkit-animation-name: tick42;
+          animation-name: tick42;
 }
 
-.left-back {
-  width: 30px;
-  height: 30px;
-  border-radius: 50% 50% 0% 50%;
-  background-color: #4c9beb;
-  display: inline-block;
-  z-index: 5;
+.pl__tick:nth-child(2) {
+  -webkit-animation-delay: -1.75s;
+          animation-delay: -1.75s;
 }
 
-.sun {
-  width: 120px;
-  height: 120px;
-  background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
-  background: linear-gradient(to right, #fcbb04, #fffc00);
-  border-radius: 60px;
-  display: inline;
-  position: absolute;
+.pl__tick:nth-child(3) {
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
 }
 
-.sunshine {
-  animation: sunshines 2s infinite;
+.pl__tick:nth-child(4) {
+  -webkit-animation-delay: -1.25s;
+          animation-delay: -1.25s;
 }
 
-@keyframes sunshines {
-  0% {
-    transform: scale(1);
-    opacity: 0.6;
+.pl__tick:nth-child(5) {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.pl__tick:nth-child(6) {
+  -webkit-animation-delay: -0.75s;
+          animation-delay: -0.75s;
+}
+
+.pl__tick:nth-child(7) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+.pl__tick:nth-child(8) {
+  -webkit-animation-delay: -0.25s;
+          animation-delay: -0.25s;
+}
+
+/* Animations */
+@-webkit-keyframes arrows42 {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
 
-  100% {
-    transform: scale(1.4);
-    opacity: 0;
+  to {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+  }
+}
+@keyframes arrows42 {
+  from {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  to {
+    -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
   }
 }
 
-@keyframes clouds {
-  0% {
-    transform: translateX(15px);
+@-webkit-keyframes ringRotate42 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@keyframes ringRotate42 {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  to {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@-webkit-keyframes ringStroke42 {
+  from,
+	to {
+    stroke-dashoffset: 452;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 
   50% {
-    transform: translateX(0px);
+    stroke-dashoffset: 169.5;
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@keyframes ringStroke42 {
+  from,
+	to {
+    stroke-dashoffset: 452;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
 
-  100% {
-    transform: translateX(15px);
+  50% {
+    stroke-dashoffset: 169.5;
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@-webkit-keyframes tick42 {
+  from,
+	3%,
+	47%,
+	to {
+    stroke-dashoffset: -12;
+  }
+
+  14%,
+	36% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes tick42 {
+  from,
+	3%,
+	47%,
+	to {
+    stroke-dashoffset: -12;
+  }
+
+  14%,
+	36% {
+    stroke-dashoffset: 0;
   }
 }
 .none{
